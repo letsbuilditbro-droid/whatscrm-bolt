@@ -1,0 +1,42 @@
+<div class="campaign-new">
+  <div class="flex justify-between items-center mb-3">
+    <h1 class="text-2xl font-bold">Create New Campaign</h1>
+    <a href="/campaigns" data-link class="btn btn-ghost">Back to Campaigns</a>
+  </div>
+
+  <div class="card">
+    <form id="create-campaign-form">
+      <div class="form-group">
+        <label class="form-label" for="name">Campaign Name</label>
+        <input type="text" id="name" name="name" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="template-select">Template</label>
+        <select id="template-select" name="templateName" class="form-select" required>
+          <option value="">Loading templates...</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="targetGroup">Target Group (optional)</label>
+        <input type="text" id="targetGroup" name="targetGroup" class="form-input" placeholder="VIP, Customers, etc.">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="targetQuery">Target Query (optional)</label>
+        <input type="text" id="targetQuery" name="targetQuery" class="form-input" placeholder="Advanced filtering query">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="scheduleAt">Schedule For (optional)</label>
+        <input type="datetime-local" id="scheduleAt" name="scheduleAt" class="form-input">
+      </div>
+
+      <div class="flex gap-2">
+        <button type="submit" class="btn btn-primary">Create Campaign</button>
+        <a href="/campaigns" data-link class="btn btn-ghost">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>

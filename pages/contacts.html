@@ -1,0 +1,63 @@
+<div class="contacts">
+  <div class="flex justify-between items-center mb-3">
+    <h1 class="text-2xl font-bold">Contacts</h1>
+    <button class="btn btn-primary" onclick="toggleCreateForm()">Add Contact</button>
+  </div>
+
+  <div class="search-bar">
+    <div class="search-icon">🔍</div>
+    <input type="text" id="search-input" class="search-input" placeholder="Search contacts...">
+  </div>
+
+  <div id="create-form" class="card hidden mb-3">
+    <h3 class="card-title">Add New Contact</h3>
+    <form id="create-contact-form">
+      <div class="grid grid-2">
+        <div class="form-group">
+          <label class="form-label" for="waId">WhatsApp ID</label>
+          <input type="text" id="waId" name="waId" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="displayName">Display Name</label>
+          <input type="text" id="displayName" name="displayName" class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="phone">Phone</label>
+          <input type="text" id="phone" name="phone" class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="groups">Groups (comma-separated)</label>
+          <input type="text" id="groups" name="groups" class="form-input" placeholder="VIP, Customers, Leads">
+        </div>
+      </div>
+      <div class="flex gap-2">
+        <button type="submit" class="btn btn-primary">Add Contact</button>
+        <button type="button" class="btn btn-ghost" onclick="toggleCreateForm()">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card mb-3">
+    <h3 class="card-title">Bulk Import</h3>
+    <div id="upload-area" class="file-upload">
+      <p>Drop CSV file here or click to select</p>
+      <p class="text-sm text-neutral-500 mt-1">CSV should have columns: waId, displayName, phone, groups</p>
+      <input type="file" id="csv-file" accept=".csv" class="hidden">
+    </div>
+  </div>
+
+  <div id="contacts-list">
+    <!-- Contacts table will be populated by JavaScript -->
+  </div>
+
+  <div id="pagination">
+    <!-- Pagination will be populated by JavaScript -->
+  </div>
+</div>
+
+<script>
+function toggleCreateForm() {
+  const form = document.getElementById('create-form');
+  form.classList.toggle('hidden');
+}
+</script>

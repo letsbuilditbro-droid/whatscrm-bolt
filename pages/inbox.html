@@ -1,0 +1,33 @@
+<div class="inbox-layout">
+  <div class="contacts-sidebar">
+    <div class="contacts-header">
+      <h2 class="text-lg font-semibold">Contacts</h2>
+    </div>
+    <div id="contacts-list">
+      <!-- Contacts will be populated by JavaScript -->
+    </div>
+  </div>
+
+  <div class="chat-thread">
+    <div class="chat-header" id="chat-header">
+      <div class="empty-state">
+        <h3>Select a contact</h3>
+        <p>Choose a contact to start messaging</p>
+      </div>
+    </div>
+    
+    <div class="chat-messages" id="chat-messages">
+      <div class="empty-state">
+        <h3>No conversation selected</h3>
+        <p>Select a contact from the sidebar to view messages</p>
+      </div>
+    </div>
+    
+    <div class="chat-input">
+      <form id="chat-form" class="chat-form">
+        <input type="text" name="message" placeholder="Type a message..." required>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+  </div>
+</div>

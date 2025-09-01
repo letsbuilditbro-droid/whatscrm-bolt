@@ -1,0 +1,20 @@
+<div class="campaigns">
+  <div class="flex justify-between items-center mb-3">
+    <h1 class="text-2xl font-bold">Campaigns</h1>
+    <a href="/campaigns/new" data-link class="btn btn-primary">New Campaign</a>
+  </div>
+
+  <div class="filters">
+    <button class="filter-btn active" data-status="all">All</button>
+    <button class="filter-btn" data-status="draft">Draft</button>
+    <button class="filter-btn" data-status="scheduled">Scheduled</button>
+    <button class="filter-btn" data-status="running">Running</button>
+    <button class="filter-btn" data-status="paused">Paused</button>
+    <button class="filter-btn" data-status="completed">Completed</button>
+    <button class="filter-btn" data-status="failed">Failed</button>
+  </div>
+
+  <div id="campaigns-list">
+    <!-- Campaigns table will be populated by JavaScript -->
+  </div>
+</div>
